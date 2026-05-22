@@ -1,0 +1,14 @@
+defaultFolder=
+outputFolder=
+muscleList=
+margin=0.15
+depth=4.2500;6.2500
+left=240;368
+right=1039;912
+top=142;142
+bottom=744;744
+summaryStatistic=avg
+normativeModelAvailable=
+normativeModels=normModels.mat
+bodyChartCoords=bodyChartCoords.mat
+annotatedBodyIm=BodyChart.jpg
