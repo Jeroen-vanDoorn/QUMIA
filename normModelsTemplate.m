@@ -2,14 +2,14 @@
 % dataset with the following variables:
 % - ID (optional)
 % - Sex (coded M/F)
-% - Age
-% - Weight
-% - Length
-% - Muscle
-% - EI
-dataset = readtable('\\tsclient\O\NEURO-KNF\research_data_echo\Spierecho normaalwaarde project 2021-2022-2023\Pooled_r123.xlsx'); % add path
-%dataset.BMI = dataset.Weight ./ (dataset.Length ./ 100) .^ 2;
-dataset.BMI = dataset.Length;
+% - Age (numeric)
+% - Weight (numeric)
+% - Length (numeric)
+% - Muscle (numeric)
+% - EI (numeric)
+
+dataset = readtable('path_to_file'); % add path
+dataset.BMI = dataset.Weight ./ (dataset.Length ./ 100) .^ 2;
 
 muscles = unique(dataset.Muscle);
 
@@ -60,7 +60,7 @@ end
 clc
 
 % index of muscles
-i = 2;
+i = 1;
 
 modelData = EImdls.Model{i}.Variables;
 % uncomment to use mean BMI for visualization, to get rid of chaotic plots
@@ -106,13 +106,14 @@ EImdls.Model{i}
 % dataset with the following variables:
 % - ID (optional)
 % - Sex (coded M/F)
-% - Dominance (coded Dominant/Non-Dominant, optional)
-% - Age
-% - Weight
-% - Length
-% - Muscle
-% - EI
-dataset = readtable('.xlsx'); % add path
+% - Dominance (coded Dominant/Non-dominant, optional)
+% - Age (numeric)
+% - Weight (numeric)
+% - Length (numeric)
+% - Muscle (numeric)
+% - TH (numeric)
+
+dataset = readtable('path_to_file'); % add path
 dataset.BMI = dataset.Weight ./ (dataset.Length ./ 100) .^ 2;
 
 muscles = unique(dataset.Muscle);
@@ -230,4 +231,3 @@ xlabel('Age (y)')
 ylabel('Muscle thickness (cm)')
 
 THmdls.Model{i}
-
