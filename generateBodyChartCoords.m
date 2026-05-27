@@ -4,13 +4,6 @@ clc
 im = imread('BodyChart.jpg');
 load('bodyChartCoords.mat');
 
-% 'Biceps brachii', 'Biceps femoris', 'Deltoideus', 'Depressor anguli oris', 'Diafragma', 'Digastricus',
-% 'Extensors underarm', 'Flexor carpi radialis', 'Flexor digitorum profundus', 'Gastrocnemius medial head',
-% 'Geniohyoideus', 'Intercostals', 'Interosseus dorsalis I', 'Masseter', 'Obliquus ext abdominus', 
-% 'Obliquus int abdominus', 'Orbicularis oris', 'Paraspinaal lumbal', 'Paraspinaal thoracal', 'Peroneus tertius', 
-% 'Rectus abdominis', 'Rectus femoris', 'Serratus anterior', 'Soleus', 'Sterno cleido', 'Temporalis' 
-% 'Tibialis anterior', 'Transversus abdominus', 'Trapezius', 'Triceps', 'Vastus lateralis', 
-% 'Zygomaticus major', 'Zygomaticus minor'
 muscle = 'Flexor carpi radialis';
 
 if ~isempty(find(strcmp(coords.muscle, muscle)))
